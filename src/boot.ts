@@ -5,9 +5,6 @@ import { Renderer } from '@pixi/core';
 import "@pixi/events";
 import '@pixi/math-extras';
 
-import { InteractionManager } from '@pixi/interaction';
-Renderer.registerPlugin('interaction', InteractionManager);
-
 import { BatchRenderer } from '@pixi/core';
 Renderer.registerPlugin('batch', BatchRenderer);
 
@@ -17,6 +14,14 @@ Application.registerPlugin(AppLoaderPlugin);
 import { Loader } from '@pixi/loaders';
 import { SpritesheetLoader } from '@pixi/spritesheet';
 Loader.registerPlugin(SpritesheetLoader);
+import { BitmapFontLoader } from '@pixi/text-bitmap';
+Loader.registerPlugin(BitmapFontLoader);
+
+import { TickerPlugin } from '@pixi/ticker';
+Application.registerPlugin(TickerPlugin);
+
+import { InteractionManager } from '@pixi/interaction';
+Renderer.registerPlugin('interaction', InteractionManager);
 
 import { skipHello } from '@pixi/utils';
 skipHello();

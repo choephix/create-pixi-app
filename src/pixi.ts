@@ -13,16 +13,7 @@ export * from "@pixi/core";
 export * from "@pixi/sprite";
 export * from "@pixi/app";
 export * from "@pixi/text";
+export * from '@pixi/text-bitmap';
 export * from "@pixi/interaction";
-
-// Renderer plugins
-import { Renderer } from "@pixi/core";
-import { BatchRenderer } from "@pixi/core";
-Renderer.registerPlugin("batch", BatchRenderer);
-import { InteractionManager } from "@pixi/interaction";
-Renderer.registerPlugin("interaction", InteractionManager);
-
-// Application plugins
-import { Application } from "@pixi/app";
-import { TickerPlugin } from "@pixi/ticker";
-Application.registerPlugin(TickerPlugin);
+export * from '@pixi/mesh';
+export * from '@pixi/graphics';
