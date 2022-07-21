@@ -18,7 +18,6 @@ import { Loader } from '@pixi/loaders';
 import { SpritesheetLoader } from '@pixi/spritesheet';
 Loader.registerPlugin(SpritesheetLoader);
 
-
 import { skipHello } from '@pixi/utils';
 skipHello();
 
