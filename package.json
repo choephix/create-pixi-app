@@ -1,0 +1,23 @@
+{
+  "name": "npm-templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --port 1234",
+    "build": "parcel build index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "bin": {
+    "create-pixi-app": "./generate-app.js"
+  }
+}
