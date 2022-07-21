@@ -6,4 +6,5 @@ console.log(MESSAGE as any);
 
 const app = boot();
 
-app.stage.addChild(new Pikachu());
+app.stage.addChild(new Pikachu()).tint = 0xffff00;
+app.stage.addChild(new Pikachu()).x = 200;
