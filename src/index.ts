@@ -22,11 +22,11 @@ app.loader.add(resourceList).load(onAssetsLoaded);
 function onAssetsLoaded() {
   const textOptions: MSDFTextOption = {
     fontFace: 'Celestial_Typeface',
-    fontSize: 100,
+    fontSize: 160,
     fillColor: 0xffffff,
-    weight: 0.6,
-    strokeThickness: 0.15,
-    strokeColor: 0x051855,
+    weight: 0.45,
+    // strokeThickness: 0.04,
+    // strokeColor: 0x051855,
     dropShadow: true,
     dropShadowColor: 0x000000,
     dropShadowOffset: new Point(0.004, 0.004),

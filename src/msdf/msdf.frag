@@ -53,3 +53,20 @@ void main(void)
         gl_FragColor = mix(shadow, text, text.a);
     }
 }
+
+void main3(void)
+{
+    float smoothing = clamp(2.0 * u_pxrange / u_fontSize, 0.0, 0.5);
+
+    vec2 textureCoord = vTextureCoord * 2.;
+    vec3 sample = texture2D(uSampler, vTextureCoord).rgb;
+    float dist = median(sample.r, sample.g, sample.b);
+
+    float alpha;
+    vec3 color;
+
+    alpha = smoothstep(u_weight - smoothing, u_weight + smoothing, dist);
+    color = u_color * alpha;
+    vec4 text = vec4(color * tint, alpha) * u_alpha;
+    gl_FragColor = text;
+}
